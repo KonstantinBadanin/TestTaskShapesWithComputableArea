@@ -1,0 +1,5 @@
+select p.name, c.name
+from Products p
+left join ProductCategoryPairs pairs on p.id = pairs.productId
+inner join Categories c on c.id = pairs.categoryId
+order by p.name
